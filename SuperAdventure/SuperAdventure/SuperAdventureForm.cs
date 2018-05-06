@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SuperAdventure
 {
-    public partial class SuperAdventure : Form
+    public partial class SuperAdventureForm : Form
     {
-        public SuperAdventure()
+        public SuperAdventureForm()
         {
             InitializeComponent();
         }
