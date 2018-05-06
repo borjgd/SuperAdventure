@@ -16,5 +16,25 @@ namespace SuperAdventure
         {
             InitializeComponent();
         }
+
+        private void btn_NewGame_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_LoadGame_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Options_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

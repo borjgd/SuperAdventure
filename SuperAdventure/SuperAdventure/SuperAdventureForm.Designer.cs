@@ -47,8 +47,8 @@
             this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.uc_MainMenu1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(0, 100);
             this.Name = "SuperAdventureForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuperAdventureForm";
             this.ResumeLayout(false);
 
