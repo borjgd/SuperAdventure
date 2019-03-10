@@ -16,5 +16,15 @@ namespace SuperAdventure
         {
             InitializeComponent();
         }
+        // Load the main menu usser control
+        private void SuperAdventureForm_Load(object sender, EventArgs e)
+        {
+            if (!pn_MainPanel.Controls.Contains(uc_MainMenu.instance))
+            {
+                pn_MainPanel.Controls.Add(uc_MainMenu.instance);
+                uc_MainMenu.instance.Dock = DockStyle.Fill;
+                uc_MainMenu.instance.BringToFront();
+            }
+        }
     }
 }

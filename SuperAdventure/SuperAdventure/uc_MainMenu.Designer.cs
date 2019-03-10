@@ -36,7 +36,7 @@
             // 
             // btn_NewGame
             // 
-            this.btn_NewGame.Location = new System.Drawing.Point(340, 138);
+            this.btn_NewGame.Location = new System.Drawing.Point(340, 133);
             this.btn_NewGame.Name = "btn_NewGame";
             this.btn_NewGame.Size = new System.Drawing.Size(140, 46);
             this.btn_NewGame.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btn_LoadGame
             // 
-            this.btn_LoadGame.Location = new System.Drawing.Point(340, 224);
+            this.btn_LoadGame.Location = new System.Drawing.Point(340, 223);
             this.btn_LoadGame.Name = "btn_LoadGame";
             this.btn_LoadGame.Size = new System.Drawing.Size(140, 46);
             this.btn_LoadGame.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btn_Options
             // 
-            this.btn_Options.Location = new System.Drawing.Point(340, 314);
+            this.btn_Options.Location = new System.Drawing.Point(340, 317);
             this.btn_Options.Name = "btn_Options";
             this.btn_Options.Size = new System.Drawing.Size(140, 46);
             this.btn_Options.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // btn_Exit
             // 
-            this.btn_Exit.Location = new System.Drawing.Point(340, 405);
+            this.btn_Exit.Location = new System.Drawing.Point(340, 409);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(140, 46);
             this.btn_Exit.TabIndex = 3;

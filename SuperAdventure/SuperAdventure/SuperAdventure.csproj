@@ -53,6 +53,12 @@
     <Compile Include="SuperAdventureForm.Designer.cs">
       <DependentUpon>SuperAdventureForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_HeroSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_HeroSelection.Designer.cs">
+      <DependentUpon>uc_HeroSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_MainMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <EmbeddedResource Include="SuperAdventureForm.resx">
       <DependentUpon>SuperAdventureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_HeroSelection.resx">
+      <DependentUpon>uc_HeroSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_MainMenu.resx">
       <DependentUpon>uc_MainMenu.cs</DependentUpon>
