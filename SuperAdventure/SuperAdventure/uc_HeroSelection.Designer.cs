@@ -28,116 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.pB_Warrior = new System.Windows.Forms.PictureBox();
+            this.pB_Mage = new System.Windows.Forms.PictureBox();
+            this.pB_Rogue = new System.Windows.Forms.PictureBox();
+            this.pB_Paladin = new System.Windows.Forms.PictureBox();
+            this.lbl_Warrior = new System.Windows.Forms.Label();
+            this.lbl_Mage = new System.Windows.Forms.Label();
+            this.lbl_Rogue = new System.Windows.Forms.Label();
+            this.lbl_Paladin = new System.Windows.Forms.Label();
+            this.lbl_ChosenHero = new System.Windows.Forms.Label();
             this.heroSelection_back_button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.btn_StartGame = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Warrior)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Mage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Rogue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Paladin)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pB_Warrior
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::SuperAdventure.Properties.Resources.warrior;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 92);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 184);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pB_Warrior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pB_Warrior.Image = global::SuperAdventure.Properties.Resources.warrior;
+            this.pB_Warrior.Location = new System.Drawing.Point(160, 124);
+            this.pB_Warrior.Name = "pB_Warrior";
+            this.pB_Warrior.Size = new System.Drawing.Size(137, 184);
+            this.pB_Warrior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pB_Warrior.TabIndex = 1;
+            this.pB_Warrior.TabStop = false;
+            this.pB_Warrior.Click += new System.EventHandler(this.pB_Warrior_Click);
             // 
-            // pictureBox2
+            // pB_Mage
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::SuperAdventure.Properties.Resources.mage;
-            this.pictureBox2.Location = new System.Drawing.Point(481, 92);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(137, 184);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pB_Mage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pB_Mage.Image = global::SuperAdventure.Properties.Resources.mage;
+            this.pB_Mage.Location = new System.Drawing.Point(481, 124);
+            this.pB_Mage.Name = "pB_Mage";
+            this.pB_Mage.Size = new System.Drawing.Size(137, 184);
+            this.pB_Mage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pB_Mage.TabIndex = 2;
+            this.pB_Mage.TabStop = false;
+            this.pB_Mage.Click += new System.EventHandler(this.pB_Mage_Click);
             // 
-            // pictureBox3
+            // pB_Rogue
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::SuperAdventure.Properties.Resources.rogue;
-            this.pictureBox3.Location = new System.Drawing.Point(160, 345);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(137, 184);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.pB_Rogue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pB_Rogue.Image = global::SuperAdventure.Properties.Resources.rogue;
+            this.pB_Rogue.Location = new System.Drawing.Point(160, 381);
+            this.pB_Rogue.Name = "pB_Rogue";
+            this.pB_Rogue.Size = new System.Drawing.Size(137, 184);
+            this.pB_Rogue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pB_Rogue.TabIndex = 3;
+            this.pB_Rogue.TabStop = false;
+            this.pB_Rogue.Click += new System.EventHandler(this.pB_Rogue_Click);
             // 
-            // pictureBox4
+            // pB_Paladin
             // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::SuperAdventure.Properties.Resources.paladin;
-            this.pictureBox4.Location = new System.Drawing.Point(481, 345);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(137, 184);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.pB_Paladin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pB_Paladin.Image = global::SuperAdventure.Properties.Resources.paladin;
+            this.pB_Paladin.Location = new System.Drawing.Point(481, 381);
+            this.pB_Paladin.Name = "pB_Paladin";
+            this.pB_Paladin.Size = new System.Drawing.Size(137, 184);
+            this.pB_Paladin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pB_Paladin.TabIndex = 4;
+            this.pB_Paladin.TabStop = false;
+            this.pB_Paladin.Click += new System.EventHandler(this.pB_Paladin_Click);
             // 
-            // label1
+            // lbl_Warrior
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(206, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Warrior";
+            this.lbl_Warrior.AutoSize = true;
+            this.lbl_Warrior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Warrior.Location = new System.Drawing.Point(208, 92);
+            this.lbl_Warrior.Name = "lbl_Warrior";
+            this.lbl_Warrior.Size = new System.Drawing.Size(43, 15);
+            this.lbl_Warrior.TabIndex = 5;
+            this.lbl_Warrior.Text = "Warrior";
             // 
-            // label2
+            // lbl_Mage
             // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(532, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Mage";
+            this.lbl_Mage.AutoSize = true;
+            this.lbl_Mage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Mage.Location = new System.Drawing.Point(532, 92);
+            this.lbl_Mage.Name = "lbl_Mage";
+            this.lbl_Mage.Size = new System.Drawing.Size(36, 15);
+            this.lbl_Mage.TabIndex = 6;
+            this.lbl_Mage.Text = "Mage";
             // 
-            // label3
+            // lbl_Rogue
             // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(208, 327);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Rogue";
+            this.lbl_Rogue.AutoSize = true;
+            this.lbl_Rogue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Rogue.Location = new System.Drawing.Point(208, 350);
+            this.lbl_Rogue.Name = "lbl_Rogue";
+            this.lbl_Rogue.Size = new System.Drawing.Size(41, 15);
+            this.lbl_Rogue.TabIndex = 7;
+            this.lbl_Rogue.Text = "Rogue";
             // 
-            // label4
+            // lbl_Paladin
             // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(532, 327);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Paladin";
+            this.lbl_Paladin.AutoSize = true;
+            this.lbl_Paladin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Paladin.Location = new System.Drawing.Point(532, 350);
+            this.lbl_Paladin.Name = "lbl_Paladin";
+            this.lbl_Paladin.Size = new System.Drawing.Size(44, 15);
+            this.lbl_Paladin.TabIndex = 8;
+            this.lbl_Paladin.Text = "Paladin";
             // 
-            // label5
+            // lbl_ChosenHero
             // 
-            this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(339, 32);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(10);
-            this.label5.Size = new System.Drawing.Size(100, 35);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Choose a Hero";
+            this.lbl_ChosenHero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ChosenHero.Location = new System.Drawing.Point(339, 32);
+            this.lbl_ChosenHero.Name = "lbl_ChosenHero";
+            this.lbl_ChosenHero.Padding = new System.Windows.Forms.Padding(10);
+            this.lbl_ChosenHero.Size = new System.Drawing.Size(100, 35);
+            this.lbl_ChosenHero.TabIndex = 9;
+            this.lbl_ChosenHero.Text = "Choose a Hero";
+            this.lbl_ChosenHero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // heroSelection_back_button
             // 
@@ -147,28 +152,40 @@
             this.heroSelection_back_button.TabIndex = 10;
             this.heroSelection_back_button.Text = "Back";
             this.heroSelection_back_button.UseVisualStyleBackColor = true;
-            this.heroSelection_back_button.Click += new System.EventHandler(this.heroSelection_back_button_Click);
+            this.heroSelection_back_button.Click += new System.EventHandler(this.btn_Back_HeroSelection);
+            // 
+            // btn_StartGame
+            // 
+            this.btn_StartGame.Location = new System.Drawing.Point(694, 32);
+            this.btn_StartGame.Name = "btn_StartGame";
+            this.btn_StartGame.Size = new System.Drawing.Size(85, 35);
+            this.btn_StartGame.TabIndex = 11;
+            this.btn_StartGame.Text = "Start";
+            this.btn_StartGame.UseVisualStyleBackColor = true;
+            this.btn_StartGame.Visible = false;
+            this.btn_StartGame.Click += new System.EventHandler(this.btn_StartGame_Click);
             // 
             // uc_HeroSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_StartGame);
             this.Controls.Add(this.heroSelection_back_button);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lbl_ChosenHero);
+            this.Controls.Add(this.lbl_Paladin);
+            this.Controls.Add(this.lbl_Rogue);
+            this.Controls.Add(this.lbl_Mage);
+            this.Controls.Add(this.lbl_Warrior);
+            this.Controls.Add(this.pB_Paladin);
+            this.Controls.Add(this.pB_Rogue);
+            this.Controls.Add(this.pB_Mage);
+            this.Controls.Add(this.pB_Warrior);
             this.Name = "uc_HeroSelection";
             this.Size = new System.Drawing.Size(800, 610);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Warrior)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Mage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Rogue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pB_Paladin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,15 +193,16 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pB_Warrior;
+        private System.Windows.Forms.PictureBox pB_Mage;
+        private System.Windows.Forms.PictureBox pB_Rogue;
+        private System.Windows.Forms.PictureBox pB_Paladin;
+        private System.Windows.Forms.Label lbl_Warrior;
+        private System.Windows.Forms.Label lbl_Mage;
+        private System.Windows.Forms.Label lbl_Rogue;
+        private System.Windows.Forms.Label lbl_Paladin;
+        private System.Windows.Forms.Label lbl_ChosenHero;
         private System.Windows.Forms.Button heroSelection_back_button;
+        private System.Windows.Forms.Button btn_StartGame;
     }
 }
