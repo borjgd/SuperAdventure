@@ -73,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SuperAdventureForm.resx">
       <DependentUpon>SuperAdventureForm.cs</DependentUpon>
@@ -101,6 +102,13 @@
       <Project>{0063273c-d4e2-44d9-8152-6e82fb2f89da}</Project>
       <Name>Engine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="images\mage.jpg" />
+    <EmbeddedResource Include="images\paladin.jpg" />
+    <EmbeddedResource Include="images\rogue.png" />
+    <EmbeddedResource Include="images\warrior.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
