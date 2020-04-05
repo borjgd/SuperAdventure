@@ -14,7 +14,7 @@ namespace SuperAdventure
     {
 
         private static uc_HeroSelection _instance;
-
+        private string heroType;
         public static uc_HeroSelection instance
         {
             get
@@ -42,64 +42,56 @@ namespace SuperAdventure
 
         private void btn_StartGame_Click(object sender, EventArgs e)
         {
-
+            uc_Game gameScreen = new uc_Game(heroType);
+            Parent.Controls.Add(gameScreen);
+            Parent.Controls.Remove(instance);
+            gameScreen.Dock = DockStyle.Fill;
+            gameScreen.BringToFront();
         }
 
-        private void pB_Warrior_Click(object sender, EventArgs e)
+        private void checkTextAndSex(object sender, EventArgs e)
         {
-            change_PictureBoxes_Border();
-            pB_Warrior.BorderStyle = BorderStyle.Fixed3D;
-            lbl_ChosenHero.Text = "Warrior";
-            
-        }
-
-        private void pB_Mage_Click(object sender, EventArgs e)
-        {
-            change_PictureBoxes_Border();
-            pB_Mage.BorderStyle = BorderStyle.Fixed3D;
-            lbl_ChosenHero.Text = "Mage";
-        }
-
-        private void pB_Rogue_Click(object sender, EventArgs e)
-        {
-            change_PictureBoxes_Border();
-            pB_Rogue.BorderStyle = BorderStyle.Fixed3D;
-            lbl_ChosenHero.Text = "Rogue";
-        }
-
-        private void pB_Paladin_Click(object sender, EventArgs e)
-        {
-            change_PictureBoxes_Border();
-            pB_Paladin.BorderStyle = BorderStyle.Fixed3D;
-            lbl_ChosenHero.Text = "Paladin";
-        }
-
-        private void change_PictureBoxes_Border()
-        {
-            if (btn_StartGame.Visible == false)
+            if(checkName() && checkSex())
             {
                 btn_StartGame.Visible = true;
             }
-            
-            if (pB_Warrior.BorderStyle == BorderStyle.Fixed3D)
+            else
             {
-                pB_Warrior.BorderStyle = BorderStyle.FixedSingle;
+                btn_StartGame.Visible = false;
             }
+        }
 
-            if (pB_Mage.BorderStyle == BorderStyle.Fixed3D)
+        private bool checkName()
+        {
+            String text = txt_Name.Text.Trim();
+            if(text != String.Empty)
             {
-                pB_Mage.BorderStyle = BorderStyle.FixedSingle;
+                if(text.Length < 3)
+                {
+                    lbl_NameError.Text = "Introduzca un nombre con al menos 3 caracteres";
+                    return false;
+                }
+                else if(text.Any(Char.IsDigit))
+                {
+                    lbl_NameError.Text = "No se permiten números";
+                    return false;
+                }
+                else
+                {
+                    lbl_NameError.Text = "";
+                    return true;
+                }
             }
+            return false;
+        }
 
-            if (pB_Rogue.BorderStyle == BorderStyle.Fixed3D)
+        private bool checkSex()
+        {
+            if(cbm_Sex.Text != String.Empty)
             {
-                pB_Rogue.BorderStyle = BorderStyle.FixedSingle;
+                return true;
             }
-
-            if (pB_Paladin.BorderStyle == BorderStyle.Fixed3D)
-            {
-                pB_Paladin.BorderStyle = BorderStyle.FixedSingle;
-            }
+            return false;
         }
     }
 }

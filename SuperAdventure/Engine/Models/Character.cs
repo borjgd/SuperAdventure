@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-    class Character
+    public class Character
     {
         // Attributes
-        public int strength { get; set; }
-        public int dexterity { get; set; }
-        public int constitution { get; set; }
-        public int intelligence { get; set; }
-        public int wisdom { get; set; }
-        public int charisma { get; set; }
+        protected int strength { get; set; }
+        protected int dexterity { get; set; }
+        protected int constitution { get; set; }
+        protected int intelligence { get; set; }
+        protected int wisdom { get; set; }
+        protected int charisma { get; set; }
 
-        public int health { get; set; }
-        public int mana { get; set; }
+        protected int currentHealth { get; set; }
+        protected int maxHealth { get; set; }
+        protected int mana { get; set; }
+        protected int experience { get; set; }
+        protected int level { get; set; }
 
         public Character()
         {
