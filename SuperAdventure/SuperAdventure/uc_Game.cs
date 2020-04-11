@@ -14,12 +14,9 @@ namespace SuperAdventure
     public partial class uc_Game : UserControl
     {
         private Player _player;
-        public String hero;
-        public uc_Game(String pHero)
+        public uc_Game()
         {
             InitializeComponent();
-            hero = pHero;
-            MessageBox.Show(hero);
             _player = new Player();
         }
     }

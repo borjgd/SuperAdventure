@@ -41,7 +41,7 @@
             // lbl_ChosenHero
             // 
             this.lbl_ChosenHero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_ChosenHero.Location = new System.Drawing.Point(311, 32);
+            this.lbl_ChosenHero.Location = new System.Drawing.Point(328, 130);
             this.lbl_ChosenHero.Name = "lbl_ChosenHero";
             this.lbl_ChosenHero.Padding = new System.Windows.Forms.Padding(10);
             this.lbl_ChosenHero.Size = new System.Drawing.Size(152, 35);
@@ -51,7 +51,7 @@
             // 
             // heroSelection_back_button
             // 
-            this.heroSelection_back_button.Location = new System.Drawing.Point(17, 32);
+            this.heroSelection_back_button.Location = new System.Drawing.Point(263, 446);
             this.heroSelection_back_button.Name = "heroSelection_back_button";
             this.heroSelection_back_button.Size = new System.Drawing.Size(85, 35);
             this.heroSelection_back_button.TabIndex = 10;
@@ -61,60 +61,67 @@
             // 
             // btn_StartGame
             // 
-            this.btn_StartGame.Location = new System.Drawing.Point(694, 32);
+            this.btn_StartGame.Enabled = false;
+            this.btn_StartGame.Location = new System.Drawing.Point(467, 446);
             this.btn_StartGame.Name = "btn_StartGame";
             this.btn_StartGame.Size = new System.Drawing.Size(85, 35);
             this.btn_StartGame.TabIndex = 11;
             this.btn_StartGame.Text = "Start";
             this.btn_StartGame.UseVisualStyleBackColor = true;
-            this.btn_StartGame.Visible = false;
             this.btn_StartGame.Click += new System.EventHandler(this.btn_StartGame_Click);
             // 
             // txt_Name
             // 
-            this.txt_Name.Location = new System.Drawing.Point(328, 161);
+            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Name.Location = new System.Drawing.Point(297, 234);
+            this.txt_Name.Multiline = true;
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(126, 20);
+            this.txt_Name.Size = new System.Drawing.Size(217, 36);
             this.txt_Name.TabIndex = 12;
             this.txt_Name.TextChanged += new System.EventHandler(this.checkTextAndSex);
             // 
             // lbl_Name
             // 
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(260, 161);
+            this.lbl_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Name.Location = new System.Drawing.Point(293, 207);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(44, 13);
+            this.lbl_Name.Size = new System.Drawing.Size(79, 24);
             this.lbl_Name.TabIndex = 14;
             this.lbl_Name.Text = "Nombre";
             // 
             // lbl_Sex
             // 
             this.lbl_Sex.AutoSize = true;
-            this.lbl_Sex.Location = new System.Drawing.Point(279, 222);
+            this.lbl_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Sex.Location = new System.Drawing.Point(293, 305);
             this.lbl_Sex.Name = "lbl_Sex";
-            this.lbl_Sex.Size = new System.Drawing.Size(25, 13);
+            this.lbl_Sex.Size = new System.Drawing.Size(43, 24);
             this.lbl_Sex.TabIndex = 15;
             this.lbl_Sex.Text = "Sex";
             // 
             // cbm_Sex
             // 
+            this.cbm_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cbm_Sex.FormattingEnabled = true;
             this.cbm_Sex.Items.AddRange(new object[] {
             "Hombre",
             "Mujer"});
-            this.cbm_Sex.Location = new System.Drawing.Point(328, 214);
+            this.cbm_Sex.Location = new System.Drawing.Point(297, 332);
             this.cbm_Sex.Name = "cbm_Sex";
-            this.cbm_Sex.Size = new System.Drawing.Size(76, 21);
+            this.cbm_Sex.Size = new System.Drawing.Size(217, 32);
             this.cbm_Sex.TabIndex = 16;
             this.cbm_Sex.TextChanged += new System.EventHandler(this.checkTextAndSex);
             // 
             // lbl_NameError
             // 
-            this.lbl_NameError.AutoSize = true;
-            this.lbl_NameError.Location = new System.Drawing.Point(325, 184);
+            this.lbl_NameError.Location = new System.Drawing.Point(260, 390);
             this.lbl_NameError.Name = "lbl_NameError";
-            this.lbl_NameError.Size = new System.Drawing.Size(0, 13);
+            this.lbl_NameError.Size = new System.Drawing.Size(292, 35);
             this.lbl_NameError.TabIndex = 17;
+            this.lbl_NameError.Text = "label1";
+            this.lbl_NameError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_NameError.Visible = false;
             // 
             // uc_HeroSelection
             // 

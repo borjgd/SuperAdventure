@@ -14,7 +14,6 @@ namespace SuperAdventure
     {
 
         private static uc_HeroSelection _instance;
-        private string heroType;
         public static uc_HeroSelection instance
         {
             get
@@ -42,7 +41,7 @@ namespace SuperAdventure
 
         private void btn_StartGame_Click(object sender, EventArgs e)
         {
-            uc_Game gameScreen = new uc_Game(heroType);
+            uc_Game gameScreen = new uc_Game();
             Parent.Controls.Add(gameScreen);
             Parent.Controls.Remove(instance);
             gameScreen.Dock = DockStyle.Fill;
@@ -53,11 +52,11 @@ namespace SuperAdventure
         {
             if(checkName() && checkSex())
             {
-                btn_StartGame.Visible = true;
+                btn_StartGame.Enabled = true;
             }
             else
             {
-                btn_StartGame.Visible = false;
+                btn_StartGame.Enabled = false;
             }
         }
 
@@ -66,18 +65,21 @@ namespace SuperAdventure
             String text = txt_Name.Text.Trim();
             if(text != String.Empty)
             {
-                if(text.Length < 3)
+                if (text.Any(Char.IsDigit))
                 {
-                    lbl_NameError.Text = "Introduzca un nombre con al menos 3 caracteres";
+                    lbl_NameError.Visible = true;
+                    lbl_NameError.Text = "No se permiten números";
                     return false;
                 }
-                else if(text.Any(Char.IsDigit))
+                else if (text.Length < 3)
                 {
-                    lbl_NameError.Text = "No se permiten números";
+                    lbl_NameError.Visible = true;
+                    lbl_NameError.Text = "Introduzca un nombre con al menos 3 caracteres";
                     return false;
                 }
                 else
                 {
+                    lbl_NameError.Visible = false;
                     lbl_NameError.Text = "";
                     return true;
                 }
