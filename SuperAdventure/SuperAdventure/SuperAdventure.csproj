@@ -1,123 +1,68 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D777D4F0-A037-4158-A1B9-EB793B863E21}</ProjectGuid>
     <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>SuperAdventure</RootNamespace>
     <AssemblyName>SuperAdventure</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SuperAdventureForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SuperAdventureForm.Designer.cs">
-      <DependentUpon>SuperAdventureForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uc_Game.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uc_Game.Designer.cs">
-      <DependentUpon>uc_Game.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uc_HeroSelection.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uc_HeroSelection.Designer.cs">
-      <DependentUpon>uc_HeroSelection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uc_MainMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uc_MainMenu.Designer.cs">
-      <DependentUpon>uc_MainMenu.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="SuperAdventureForm.resx">
-      <DependentUpon>SuperAdventureForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uc_Game.resx">
-      <DependentUpon>uc_Game.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uc_HeroSelection.resx">
-      <DependentUpon>uc_HeroSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uc_MainMenu.resx">
-      <DependentUpon>uc_MainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.csproj">
       <Project>{0063273c-d4e2-44d9-8152-6e82fb2f89da}</Project>
       <Name>Engine</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="images\mage.jpg" />
-    <EmbeddedResource Include="images\paladin.jpg" />
-    <EmbeddedResource Include="images\rogue.png" />
-    <EmbeddedResource Include="images\warrior.jpg" />
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Update="SuperAdventureForm.resx">
+      <DependentUpon>SuperAdventureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="SuperAdventureForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SuperAdventureForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="uc_Game.resx">
+      <DependentUpon>uc_Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="uc_Game.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>uc_Game.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="uc_HeroSelection.resx">
+      <DependentUpon>uc_HeroSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="uc_HeroSelection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>uc_HeroSelection.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="uc_MainMenu.resx">
+      <DependentUpon>uc_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="uc_MainMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>uc_MainMenu.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
 </Project>
